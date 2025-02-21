@@ -315,7 +315,7 @@ TextureImporter:
         x: 236
         y: 532
         width: 46
-        height: 38
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,6 +325,48 @@ TextureImporter:
       bones: []
       spriteID: 0cdd3fcf389fad947a95bee3fb6769ce
       internalID: 793182463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AsteroidSmall2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 531
+        width: 45
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27651152977148940918056d6cafb4bf
+      internalID: 2094846749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivesIcon
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 698
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb242f5a7a9c61d4a9bfa66f54014174
+      internalID: 1686577603
       vertices: []
       indices: 
       edges: []
@@ -353,6 +395,8 @@ TextureImporter:
       AsteroidMed1: 1691000736
       AsteroidMed2: -1094783915
       AsteroidSmall1: 793182463
+      AsteroidSmall2: 2094846749
+      LivesIcon: 1686577603
       bulletPlayer1: -271760094
       enemyShip01: -122230846
       playerShip: 636024138
