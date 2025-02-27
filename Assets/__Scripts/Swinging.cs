@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Swinging : MonoBehaviour
@@ -8,7 +7,7 @@ public class Swinging : MonoBehaviour
     public LineRenderer lr;
     public Transform gunTip, cam, player;
     public LayerMask whatIsGrappleable;
-    public PlayerMovementGrappling pm;
+    public FirstPersonController fpsController;
 
     [Header("Swinging")]
     private float maxSwingDistance = 25f;
@@ -29,7 +28,6 @@ public class Swinging : MonoBehaviour
 
     [Header("Input")]
     public KeyCode swingKey = KeyCode.Mouse0;
-
 
     private void Update()
     {
@@ -87,7 +85,6 @@ public class Swinging : MonoBehaviour
         predictionHit = raycastHit.point == Vector3.zero ? sphereCastHit : raycastHit;
     }
 
-
     private void StartSwing()
     {
         // return if predictionHit not found
@@ -96,9 +93,7 @@ public class Swinging : MonoBehaviour
         // deactivate active grapple
         if(GetComponent<Grappling>() != null)
             GetComponent<Grappling>().StopGrapple();
-        pm.ResetRestrictions();
-
-        pm.swinging = true;
+        fpsController.freezeMovement = true;
 
         swingPoint = predictionHit.point;
         joint = player.gameObject.AddComponent<SpringJoint>();
@@ -117,12 +112,11 @@ public class Swinging : MonoBehaviour
         joint.massScale = 4.5f;
 
         lr.positionCount = 2;
-        currentGrapplePosition = gunTip.position;
     }
 
     public void StopSwing()
     {
-        pm.swinging = false;
+        fpsController.freezeMovement = false;
 
         lr.positionCount = 0;
 
@@ -160,17 +154,12 @@ public class Swinging : MonoBehaviour
         }
     }
 
-    private Vector3 currentGrapplePosition;
-
     private void DrawRope()
     {
         // if not grappling, don't draw rope
         if (!joint) return;
 
-        currentGrapplePosition = 
-            Vector3.Lerp(currentGrapplePosition, swingPoint, Time.deltaTime * 8f);
-
         lr.SetPosition(0, gunTip.position);
-        lr.SetPosition(1, currentGrapplePosition);
+        lr.SetPosition(1, swingPoint);
     }
 }
