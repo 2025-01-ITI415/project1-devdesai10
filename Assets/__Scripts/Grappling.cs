@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class Grappling : MonoBehaviour
 {
@@ -114,7 +115,7 @@ public class Grappling : MonoBehaviour
         transform.position = targetPosition; // Ensure the player reaches the target position
     }
 
-    private void StopGrapple()
+    public void StopGrapple()
     {
         fpsController.freezeMovement = false; // Unfreeze movement
         grappling = false; // Stop grappling

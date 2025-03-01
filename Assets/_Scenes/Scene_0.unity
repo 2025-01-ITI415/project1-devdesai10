@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 888095149}
   - component: {fileID: 888095148}
   - component: {fileID: 888095147}
+  - component: {fileID: 888095151}
   m_Layer: 0
   m_Name: Grapple Gun
   m_TagString: Untagged
@@ -498,6 +499,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888095145}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &888095151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888095145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafa5ef6170b5a94f82163de8763cd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lr: {fileID: 0}
+  gunTip: {fileID: 0}
+  cam: {fileID: 0}
+  player: {fileID: 0}
+  whatIsGrappleable:
+    serializedVersion: 2
+    m_Bits: 0
+  fpsController: {fileID: 0}
+  orientation: {fileID: 0}
+  rb: {fileID: 0}
+  horizontalThrustForce: 0
+  forwardThrustForce: 0
+  extendCableSpeed: 0
+  predictionSphereCastRadius: 0
+  predictionPoint: {fileID: 0}
+  swingKey: 323
 --- !u!1 &924548402
 GameObject:
   m_ObjectHideFlags: 0
