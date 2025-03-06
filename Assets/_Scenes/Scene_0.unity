@@ -1302,7 +1302,7 @@ MonoBehaviour:
   forwardThrustForce: 0
   extendCableSpeed: 0
   predictionSphereCastRadius: 0
-  predictionPoint: {fileID: 0}
+  predictionPoint: {fileID: 108205251}
   swingKey: 323
 --- !u!1 &924548402
 GameObject:
